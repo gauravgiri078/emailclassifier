@@ -66,9 +66,9 @@ class SpamClassifierApp(ctk.CTk):
         prediction = model.predict(input_data)[0]
 
         if prediction == 1:
-            self.result_label.configure(text="✅ Prediction: Ham", text_color="green")
+            self.result_label.configure(text=" Prediction: Ham", text_color="green")
         else:
-            self.result_label.configure(text="❌ Prediction: Spam", text_color="red")
+            self.result_label.configure(text="  Prediction: Spam", text_color="red")
 
     def clear_input(self):
         self.message_entry.delete("1.0", "end")
